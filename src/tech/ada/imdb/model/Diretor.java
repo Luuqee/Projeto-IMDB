@@ -1,7 +1,11 @@
 package tech.ada.imdb.model;
 
-public class Diretor {
+import java.time.LocalDate;
 
-    private String nome;
+public class Diretor extends Pessoa{
 
+
+    public Diretor(String nome, LocalDate dataNascimento, String sexo) {
+        super(nome, dataNascimento, sexo);
+    }
 }
