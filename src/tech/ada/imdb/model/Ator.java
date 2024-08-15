@@ -1,4 +1,10 @@
 package tech.ada.imdb.model;
 
-public class Ator {
+import java.time.LocalDate;
+
+public class Ator  extends  Pessoa{
+
+    public Ator(String nome, LocalDate dataNascimento, String sexo) {
+        super(nome, dataNascimento, sexo);
+    }
 }
