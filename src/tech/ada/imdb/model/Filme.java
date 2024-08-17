@@ -10,13 +10,13 @@ public class Filme {
 // Construtor
 
 
-public Filme(String nomeFilme, String dataLancamento, double orcamento, String descricao) {
-    this.nomeFilme = nomeFilme;
-    this.dataLancamento = dataLancamento;
-    this.orcamento = orcamento;
-    this.descricao = descricao;
+    public Filme(String nomeFilme, String dataLancamento, double orcamento, String descricao) {
+        this.nomeFilme = nomeFilme;
+        this.dataLancamento = dataLancamento;
+        this.orcamento = orcamento;
+        this.descricao = descricao;
+    }
 
-}
 
 // Get e Set
 
@@ -51,7 +51,10 @@ public Filme(String nomeFilme, String dataLancamento, double orcamento, String d
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
+
 }
+
+
 
 
 
