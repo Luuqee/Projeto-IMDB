@@ -10,7 +10,7 @@ public class Filme {
     private final String descricao;
     private final Genero genero;
     private final ArrayList<Diretor> diretor;
-    private final ArrayList<Ator> atores;
+    private Ator atores;
 
 
 // Construtor
@@ -23,12 +23,18 @@ public class Filme {
         this.descricao = descricao;
         this.genero = genero;
         this.diretor = diretor;
-        this.atores = new ArrayList<>();
     }
 
 
 // Get e Set
 
+    public void setAtor(Ator ator) {
+        this.atores = ator;
+    }
+
+    public Ator getAtores() {
+        return atores;
+    }
 
     public Genero getGenero() {
         return genero;
@@ -49,11 +55,6 @@ public class Filme {
 
     public String getDescricao() {
         return descricao;
-    }
-
-
-    public ArrayList<Ator> getAtores() {
-        return atores;
     }
 
     public void setDiretor(Diretor diretor) {
