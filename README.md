@@ -43,7 +43,7 @@ projeto.
 ## Como executar o projeto pelo IntelliJ
 1. Abra o projeto no IntelliJ.
 2. Execute o arquivo **Main.java**.
-3. O jogo será iniciado e você poderá jogar.
+3. O programa será iniciado e você poderá utilizá-lo.
 
 ## Como executar o projeto pelo terminal
 1. Navegue a pasta onde o arquivo **Main.java** está localizado e execute o seguite comando.
@@ -54,7 +54,7 @@ javac Main.java
 ```cmd
 java Main
 ```
-3. O jogo será iniciado e você poderá jogar.
+3. O programa será iniciado e você poderá utilizá-lo.
 
 
 
