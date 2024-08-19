@@ -1,13 +1,12 @@
 package tech.ada.imdb.model;
 
-import java.time.LocalDate;
 
 public abstract class Pessoa {
     private String nome;
-    private LocalDate dataNascimento;
+    private String dataNascimento;
     private String sexo;
 
-    public Pessoa(String nome, LocalDate dataNascimento, String sexo) {
+    public Pessoa(String nome, String dataNascimento, String sexo) {
         this.nome = nome;
         this.dataNascimento = dataNascimento;
         this.sexo = sexo;
@@ -21,11 +20,11 @@ public abstract class Pessoa {
         this.nome = nome;
     }
 
-    public LocalDate getDataNascimento() {
+    public String getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setDataNascimento(LocalDate dataNascimento) {
+    public void setDataNascimento(String dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 
