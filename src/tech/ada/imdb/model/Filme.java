@@ -13,7 +13,7 @@ public class Filme {
     private final ArrayList<Ator> atores;
 
 
-// Construtor
+
 
 
     public Filme(String nomeFilme, String dataLancamento, double orcamento, String descricao, Genero genero, ArrayList<Diretor> diretor) {
@@ -27,7 +27,6 @@ public class Filme {
     }
 
 
-// Get e Set
 
 
     public Genero getGenero() {

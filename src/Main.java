@@ -159,29 +159,55 @@ public class Main {
 
 
     public static void associarFilmeAtor() {
-        System.out.println("Digite o nome do filme: ");
-        String nomeFilme = scanner.nextLine();
-        ArrayList<Filme> filmes = filmeNegocio.buscarFilmePorNome(nomeFilme);
+    System.out.println("Digite o nome do filme: ");
+    String nomeFilme = scanner.nextLine();
+    ArrayList<Filme> filmes = filmeNegocio.buscarFilmePorNome(nomeFilme);
 
-        if (filmes.isEmpty()) {
-            System.out.println("Filme não encontrado.");
-            return;
-        }
-
-        System.out.println("Digite o nome do ator: ");
-        String nomeAtor = scanner.nextLine();
-        ArrayList<Ator> atores = atorNegocio.findAtoresByName(nomeAtor);
-
-        if (atores.isEmpty()) {
-            System.out.println("Ator não encontrado.");
-            return;
-        }
-
-        Filme filme = filmes.getFirst();
-        Ator ator = atores.getFirst();
-        filme.getAtores().add(ator);
-        System.out.println("Ator associado ao filme com sucesso.");
+    if (filmes.isEmpty()) {
+        System.out.println("Filme não encontrado.");
+        return;
     }
+
+    System.out.println("Filmes encontrados:");
+    for (int i = 0; i < filmes.size(); i++) {
+        System.out.println((i + 1) + ". " + filmes.get(i).getNomeFilme());
+    }
+    System.out.println("Escolha o número do filme: ");
+    int filmeEscolhido = scanner.nextInt();
+    scanner.nextLine();
+
+    if (filmeEscolhido < 1 || filmeEscolhido > filmes.size()) {
+        System.out.println("Escolha inválida.");
+        return;
+    }
+
+    Filme filme = filmes.get(filmeEscolhido - 1);
+
+    System.out.println("Digite o nome do ator: ");
+    String nomeAtor = scanner.nextLine();
+    ArrayList<Ator> atores = atorNegocio.findAtoresByName(nomeAtor);
+
+    if (atores.isEmpty()) {
+        System.out.println("Ator não encontrado.");
+        return;
+    }
+
+    System.out.println("Atores encontrados:");
+    for (int i = 0; i < atores.size(); i++) {
+        System.out.println((i + 1) + ". " + atores.get(i).getNome());
+    }
+    System.out.println("Escolha o número do ator: ");
+    int atorEscolhido = scanner.nextInt();
+    scanner.nextLine();
+    if (atorEscolhido < 1 || atorEscolhido > atores.size()) {
+        System.out.println("Escolha inválida.");
+        return;
+    }
+
+    Ator ator = atores.get(atorEscolhido - 1);
+    filme.getAtores().add(ator);
+    System.out.println("Ator associado ao filme com sucesso.");
+}
 
     public static void buscarFilmePorNome() {
         System.out.println("Digite o nome do filme: ");
