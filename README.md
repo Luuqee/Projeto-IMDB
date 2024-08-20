@@ -57,4 +57,6 @@ java Main
 3. O programa será iniciado e você poderá utilizá-lo.
 
 
-
+## Contribuidores
+- Lucas Sousa -> [Lucas Github](https://github.com/Luuqee)
+- Igor Ujiie  -> [Igor Github](https://github.com/igorujiie)
